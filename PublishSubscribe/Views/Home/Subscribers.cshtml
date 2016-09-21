@@ -1,0 +1,56 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section scripts{
+    <script src="~/Scripts/app/subscribers.js"></script>
+}
+
+<h2>Subscribers Messages</h2>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <label for="subscribers">Select Subscriber</label>
+        <div class="list-group" id="subscribers">
+            <a href="#" class="list-group-item active">
+                Select Subscriber...
+            </a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label for="subscribersNewMessages">Subscribers New Messages</label>
+        <div class="list-group" id="subscribersNewMessages">
+            <a href="#" class="list-group-item list-group-item-action active">
+                <h5 class="list-group-item-heading">Select Subscriber</h5>
+                <p class="list-group-item-text"></p>
+                <span></span>
+            </a>
+           
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <label >Subscriber pull criteria</label>
+        <div class="row">
+            <label for="tags">Tags</label>
+            <input type="text" class="form-control" id="tags" placeholder="Tags">
+        </div>
+        
+        <div class="row">
+            <label for="titleContains">Title Contains</label>
+            <input type="text" class="form-control" id="titleContains" placeholder="Title Contains">
+        </div>
+
+        <div class="row">
+            <label for="contentContains">Content Contains</label>
+            <input type="text" class="form-control" id="contentContains" placeholder="Content Contains">
+        </div>
+        
+        <div class="row">
+            <button type="submit" class="btn btn-primary" id="saveCriteria">Save</button>
+        </div>
+    </div>
+
+</div>
