@@ -1,0 +1,31 @@
+Architecture
+	- mongodb has been chosen for the db engine because it has the "sharding operation" this will allow
+	 the increase of the throughput dramatically, and it well suite our case
+
+Design and Technology
+	- It is better to use asp with .net Core and mongoDb
+	- UI meant to be angular 2 with Typescript but due to the time constrains we kept it javaScript
+	- 
+
+Overall
+	- there is many areas should be enhanced in this solution like
+		- UI
+		- Busy Indicator in the client side
+		- Base Component and angular services to do the common operation
+		- Base URL in the client side need to be handled
+
+		- ASP
+		- Authentication and Authorization
+		- Db Connection Strings for deferent environments (Development,Testing,Staging,Live) need to be handled
+		- Client Side and Server side error handling 
+		- Since we have API we should expose OData to simplify the queries
+		
+		- Project (Domain) (Publish and Subscribe)
+		- let the client report back which message he received to make the solution more reliability
+		  since you don't know the message received safely by the client or not 
+		- let the client send the message inside the HTTP body, URL is not the best practice
+		- implement "Subscriber New Messages" method in the subscribers service
+		- make sure the Unit Testing cover most of the project
+		- create Bulk Messages Distribution feature, since we have API this feature will be useful to the publishers
+		- Implement SignalR to let the Subscribers have the luxury of the instant message receiving
+
